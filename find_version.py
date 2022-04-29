@@ -62,7 +62,7 @@ if __name__ == "__main__":
         opencv_version += "+{}".format(version)
 
     with open("cv2/version.py", "w") as f:
-        f.write('opencv_version = "{}"\n'.format(opencv_version))
+        f.write('opencv_version = "{}"\n'.format("4.6.0"))
         f.write("contrib = {}\n".format(contrib))
         f.write("headless = {}\n".format(headless))
         f.write("ci_build = {}".format(ci_build))

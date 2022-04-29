@@ -62,7 +62,7 @@ def main():
     # https://stackoverflow.com/questions/1405913/python-32bit-or-64bit-mode
     is64 = sys.maxsize > 2 ** 32
 
-    package_name = "opencv-python"
+    package_name = "opencv-python-ffmpeg"
 
     if build_contrib and not build_headless:
         package_name = "opencv-contrib-python"
@@ -144,6 +144,7 @@ def main():
             "-DPYTHON3_LIBRARY=%s" % python_lib_path,
             "-DBUILD_opencv_python3=ON",
             "-DBUILD_opencv_python2=OFF",
+            "-DWITH_FFMPEG=1",
             # Disable the Java build by default as it is not needed
             "-DBUILD_opencv_java=%s" % build_java,
             # Relative dir to install the built module to in the build tree.
